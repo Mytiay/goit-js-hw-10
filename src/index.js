@@ -1,7 +1,9 @@
 import './css/styles.css';
 import debounce from 'lodash.debounce';
 import { Notify } from 'notiflix';
-
+import { fetchCountries } from './feach';
+import { getItem } from './items'
+import { getInfo } from './items';
 
 const DEBOUNCE_DELAY = 300;
 
