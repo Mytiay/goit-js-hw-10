@@ -15,3 +15,13 @@ height="20px"/>
 <p><span class="span-info">Population:</span>${population.toLocaleString()}</p>
 <p><span class="span-info">Languages:</span>${Object.values(languages)}</p>
 `;
+
+export const getInfo = ({ name, flags }) => `
+<li class="country-item">
+<span class="icon-flag">
+<img
+src="${flags.png}"
+alt="${name.official}"
+width="25px"
+height="15px"/></span>
+${name.official}</li>`;
