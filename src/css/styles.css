@@ -18,3 +18,17 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.country-list {
+  font-size: 20px;
+  color: steelblue;
+  line-height: 0.7em;
+  font-weight: 500;
+}
+
+.input-list {
+width: 250px;
+border-radius: 5px;
+border-color: #58123e;
+font-size: 16px;
+}
