@@ -20,7 +20,7 @@ const clearList = () => (refs.countryList.innerHTML = '');
 const clearCountrys = () => (refs.countrysInfo.innerHTML = '');
 
 function onInputSubmit(e) {
-  let name = refs.input.ariaValueMax.trim();
+  let name = refs.input.value.trim();
 
   if (name) {
     fetchCountries(name)
@@ -44,5 +44,16 @@ function onFechError() {
   Notify.failure(`OOps, there is no country with that name`, { timeout: 1000 });
 };
 
+function renderCountry(items) {
+  let listCountry = items.map(getItem);
 
+  clearList();
+  refs.countryList.insertAdjacentHTML('beforeend', listCountry.join(''));
+}
 
+function renderSinglCountry(items) {
+  let listCountry = items.map(getInfo);
+
+  clearSingleCountryList();
+  refs.countrysInfo.insertAdjacentHTML('beforeend', listCountry.join(''));
+}
